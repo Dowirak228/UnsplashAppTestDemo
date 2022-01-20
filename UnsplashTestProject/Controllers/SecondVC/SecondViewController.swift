@@ -27,7 +27,7 @@ class SecondViewController: UITableViewController {
     
     @objc func refreshTapped() {
         DispatchQueue.main.async {
-            self.tableView.reloadData()
+            AnimatableReload.reload(tableView: self.tableView, animationDirection: "up")
         }
     }
     
